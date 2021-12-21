@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using NerdStore.Catalogo.Data.Context;
 using NerdStore.Catalogo.Domain.Entities;
 using NerdStore.Catalogo.Domain.Interfaces;
+using NerdStore.Catalogo.Domain.Interfaces.Repository;
 using NerdStore.Core.Data;
 
 namespace NerdStore.Catalogo.Data.Repositories
