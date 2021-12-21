@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NerdStore.Core.DomainObjects
 {
-    public class Validacoes
+    public static class Validacoes
     {
         public static void ValidarSeIgual(object objeto1, object objeto2, string mensagem)
         {
