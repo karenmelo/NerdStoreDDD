@@ -1,13 +1,12 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using NerdStore.Core.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 using NerdStore.Catalogo.Data.Context;
 using NerdStore.Catalogo.Domain.Entities;
-using NerdStore.Catalogo.Domain.Interfaces;
 using NerdStore.Catalogo.Domain.Interfaces.Repository;
-using NerdStore.Core.Data;
 
 namespace NerdStore.Catalogo.Data.Repositories
 {
@@ -21,10 +20,11 @@ namespace NerdStore.Catalogo.Data.Repositories
         }
 
         public IUnitOfWork UnitOfWork => _context;
-        
+
         public async Task<IEnumerable<Produto>> ObterTodos()
         {
-            return await _context.Produtos.AsNoTracking().ToListAsync();
+            var produto = await _context.Produtos.AsNoTracking().ToListAsync();
+            return produto;
         }
 
         public async Task<Produto> ObterPorId(Guid id)

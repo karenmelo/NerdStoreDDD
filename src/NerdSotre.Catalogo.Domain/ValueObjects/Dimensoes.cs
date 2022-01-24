@@ -15,11 +15,11 @@ namespace NerdStore.Catalogo.Domain.ValueObjects
 
         public Dimensoes(decimal altura, decimal largura, decimal profundidade)
         {
-            Validar();
-
             Altura = altura;
             Largura = largura;
             Profundidade = profundidade;
+
+            Validar();
         }
 
         public void Validar()
