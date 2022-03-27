@@ -52,6 +52,30 @@ namespace NerdStore.WebApp.MVC.Controllers.Admin
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        [Route("editar-produto")]
+        public async Task<IActionResult>AtualizarProduto(Guid id)
+        {
+            var produto = await _produtoAppService.ObterPorId(id);
+            var produtoCompleto = await PopularCategorias(produto);
+            return View(produtoCompleto);
+         }
+
+        [HttpPost]
+        [Route("editar-produto")]
+        public async Task<IActionResult> AtualizarProduto(Guid id, ProdutoDTO produtoViewModel)
+        {
+            var produto = await _produtoAppService.ObterPorId(id);
+            produtoViewModel.QuantidadeEstoque = produto.QuantidadeEstoque;
+
+            ModelState.Remove("QuantidadeEstoque");
+            if (!ModelState.IsValid) return View(await PopularCategorias(produtoViewModel));
+
+            await _produtoAppService.AtualizarProduto(produtoViewModel);
+
+            return RedirectToAction("Index");
+        }
+
         /// <summary>
         /// Carrega a pagina de Estoque
         /// </summary>
