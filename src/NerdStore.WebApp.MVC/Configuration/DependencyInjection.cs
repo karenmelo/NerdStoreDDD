@@ -11,6 +11,7 @@ using NerdStore.Catalogo.Domain.Interfaces.Services;
 using NerdStore.Catalogo.Domain.Services;
 using NerdStore.Core.Bus;
 using NerdStore.Core.Bus.Interfaces;
+using NerdStore.Vendas.Application.Commands;
 
 namespace NerdStore.WebApp.MVC.Configuration
 {
@@ -30,6 +31,9 @@ namespace NerdStore.WebApp.MVC.Configuration
 
 
             services.AddScoped<INotificationHandler<ProdutoEstoqueBaixoEvent>, ProdutoEventHandler>();
+
+            //Vendas
+            services.AddScoped<IRequestHandler<AdicionarItemPedidoCommand, bool>, PedidoCommandHandler>();
         }
     }
 }
