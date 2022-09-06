@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using NerdStore.Core.Messages;
+﻿using NerdStore.Core.Messages;
+using System.Threading.Tasks;
 
 namespace NerdStore.Core.Bus.Interfaces
 {

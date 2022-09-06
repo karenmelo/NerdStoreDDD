@@ -1,9 +1,7 @@
-﻿using System;
+﻿using NerdStore.Catalogo.Application.DTO;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using NerdStore.Catalogo.Application.DTO;
 
 namespace NerdStore.Catalogo.Application.Services.Interfaces
 {

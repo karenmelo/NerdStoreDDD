@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NerdStore.Catalogo.Data.Context;
+using NerdStore.Catalogo.Domain.Entities;
+using NerdStore.Catalogo.Domain.Interfaces.Repository;
 using NerdStore.Core.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using NerdStore.Catalogo.Data.Context;
-using NerdStore.Catalogo.Domain.Entities;
-using NerdStore.Catalogo.Domain.Interfaces.Repository;
 
 namespace NerdStore.Catalogo.Data.Repositories
 {

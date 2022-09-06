@@ -1,23 +1,9 @@
 ﻿using NerdStore.Core.DomainObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NerdStore.Vendas.Domain.Entities
 {
     public class PedidoItem : Entity
     {
-        public PedidoItem(Guid produtoId, string protudoNome, int quantidade, decimal valorUnitario)
-        {
-            ProdutoId = produtoId;
-            ProtudoNome = protudoNome;
-            Quantidade = quantidade;
-            ValorUnitario = valorUnitario;
-        }
-
-        protected PedidoItem() { }
 
         public Guid PedidoId { get; private set; }
         public Guid ProdutoId { get; private set; }
@@ -28,7 +14,15 @@ namespace NerdStore.Vendas.Domain.Entities
         //EF Relational
         public Pedido Pedido { get; private set; }
 
+        public PedidoItem(Guid produtoId, string protudoNome, int quantidade, decimal valorUnitario)
+        {
+            ProdutoId = produtoId;
+            ProtudoNome = protudoNome;
+            Quantidade = quantidade;
+            ValorUnitario = valorUnitario;
+        }
 
+        protected PedidoItem() { }
 
         internal void AssociarPedido(Guid pedidoId)
         {
@@ -50,5 +44,9 @@ namespace NerdStore.Vendas.Domain.Entities
             Quantidade = unidades;
         }
 
+        public override bool EhValido()
+        {
+            return true;
+        }
     }
 }

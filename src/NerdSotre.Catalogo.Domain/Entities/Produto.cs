@@ -1,6 +1,6 @@
-﻿using System;
-using NerdStore.Catalogo.Domain.ValueObjects;
+﻿using NerdStore.Catalogo.Domain.ValueObjects;
 using NerdStore.Core.DomainObjects;
+using System;
 
 namespace NerdStore.Catalogo.Domain.Entities
 {

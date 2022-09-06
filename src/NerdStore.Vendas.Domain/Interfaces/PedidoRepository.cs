@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NerdStore.Vendas.Domain.Interfaces
+﻿namespace NerdStore.Vendas.Domain.Interfaces
 {
     internal interface PedidoRepository
     {

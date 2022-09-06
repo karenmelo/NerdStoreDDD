@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using NerdStore.Catalogo.Application.DTO;
 using NerdStore.Catalogo.Application.Services.Interfaces;
+using System;
+using System.Threading.Tasks;
 
 namespace NerdStore.WebApp.MVC.Controllers.Admin
 {
@@ -54,12 +52,12 @@ namespace NerdStore.WebApp.MVC.Controllers.Admin
 
         [HttpGet]
         [Route("editar-produto")]
-        public async Task<IActionResult>AtualizarProduto(Guid id)
+        public async Task<IActionResult> AtualizarProduto(Guid id)
         {
             var produto = await _produtoAppService.ObterPorId(id);
             var produtoCompleto = await PopularCategorias(produto);
             return View(produtoCompleto);
-         }
+        }
 
         [HttpPost]
         [Route("editar-produto")]

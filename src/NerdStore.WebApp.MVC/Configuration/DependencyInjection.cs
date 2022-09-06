@@ -20,7 +20,7 @@ namespace NerdStore.WebApp.MVC.Configuration
         {
             //Domain bus (mediatr)
             services.AddScoped<IMediatrHandler, MediatrHandler>();
-       
+
 
             // Catalogo
             services.AddScoped<IProdutoRepository, ProdutoRepository>();

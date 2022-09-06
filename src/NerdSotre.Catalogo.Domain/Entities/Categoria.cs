@@ -13,7 +13,7 @@ namespace NerdStore.Catalogo.Domain.Entities
 
         protected Categoria()
         {
-                
+
         }
 
         public Categoria(string nome, int codigo)

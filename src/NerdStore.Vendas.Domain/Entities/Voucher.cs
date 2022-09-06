@@ -1,10 +1,5 @@
 ﻿using NerdStore.Core.DomainObjects;
 using NerdStore.Vendas.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NerdStore.Vendas.Domain.Entities
 {
@@ -21,7 +16,7 @@ namespace NerdStore.Vendas.Domain.Entities
         public bool Ativo { get; private set; }
         public bool Utilizado { get; private set; }
 
-        //EF Rel.
+        //EF Rel. de 1 x N
         public ICollection<Pedido> Pedidos { get; set; }
     }
 }

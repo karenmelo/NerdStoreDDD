@@ -12,7 +12,7 @@ namespace NerdStore.Catalogo.Application.AutoMapper
                 .ForMember(d => d.Altura, opt => opt.MapFrom(source => source.Dimensoes.Altura))
                 .ForMember(d => d.Largura, opt => opt.MapFrom(source => source.Dimensoes.Largura))
                 .ForMember(d => d.Profundidade, opt => opt.MapFrom(source => source.Dimensoes.Profundidade));
-             
+
             CreateMap<Categoria, CategoriaDTO>();
 
         }

@@ -1,7 +1,7 @@
 ﻿using MediatR;
+using NerdStore.Catalogo.Domain.Interfaces.Repository;
 using System.Threading;
 using System.Threading.Tasks;
-using NerdStore.Catalogo.Domain.Interfaces.Repository;
 
 namespace NerdStore.Catalogo.Domain.Events.Handler
 {
@@ -18,7 +18,7 @@ namespace NerdStore.Catalogo.Domain.Events.Handler
         {
             var produto = await _produtoRepository.ObterPorId(notification.AggregateId);
 
-          //Enviar um email para aquisição de mais produtos.
+            //Enviar um email para aquisição de mais produtos.
         }
     }
 }

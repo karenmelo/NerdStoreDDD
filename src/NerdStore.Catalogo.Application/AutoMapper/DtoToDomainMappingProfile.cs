@@ -11,9 +11,9 @@ namespace NerdStore.Catalogo.Application.AutoMapper
         {
             CreateMap<ProdutoDTO, Produto>()
                 .ConstructUsing(
-                p => 
+                p =>
                     new Produto(p.Nome, p.Descricao, p.Ativo,
-                        p.Valor, p.CategoriaId, p.DataCadastro, 
+                        p.Valor, p.CategoriaId, p.DataCadastro,
                         p.Imagem, new Dimensoes(p.Altura, p.Largura, p.Profundidade)));
 
             CreateMap<CategoriaDTO, Categoria>()

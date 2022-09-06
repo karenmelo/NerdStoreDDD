@@ -29,7 +29,7 @@ namespace NerdStore.WebApp.MVC
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDbContext<CatalogoContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            
+
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -70,7 +70,7 @@ namespace NerdStore.WebApp.MVC
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Vitrine}/{action=Index}/{id?}");
-          
+
             });
         }
     }

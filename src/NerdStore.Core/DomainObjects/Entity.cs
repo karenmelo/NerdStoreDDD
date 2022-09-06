@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NerdStore.Core.DomainObjects
 {
-    public abstract  class Entity
+    public abstract class Entity
     {
         public Guid Id { get; set; }
 
@@ -48,6 +44,11 @@ namespace NerdStore.Core.DomainObjects
         public override string ToString()
         {
             return $"{GetType().Name} [Id={Id}]";
+        }
+
+        public virtual bool EhValido()
+        {
+            throw new NotImplementedException();
         }
     }
 }

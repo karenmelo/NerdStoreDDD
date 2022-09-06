@@ -1,9 +1,9 @@
-﻿using NerdStore.Catalogo.Domain.Interfaces.Repository;
+﻿using NerdStore.Catalogo.Domain.Events;
+using NerdStore.Catalogo.Domain.Interfaces.Repository;
 using NerdStore.Catalogo.Domain.Interfaces.Services;
+using NerdStore.Core.Bus.Interfaces;
 using System;
 using System.Threading.Tasks;
-using NerdStore.Catalogo.Domain.Events;
-using NerdStore.Core.Bus.Interfaces;
 
 namespace NerdStore.Catalogo.Domain.Services
 {

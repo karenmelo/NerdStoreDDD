@@ -22,7 +22,7 @@ namespace NerdStore.WebApp.MVC.Controllers
             return View(await _produtoAppService.ObterTodos());
         }
 
-        [HttpGet]    
+        [HttpGet]
         [Route("produto-detalhe/{id}")]
         public async Task<IActionResult> ProdutoDetalhe(Guid id)
         {

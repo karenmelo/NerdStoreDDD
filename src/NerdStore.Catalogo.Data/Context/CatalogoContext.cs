@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using NerdStore.Catalogo.Domain.Entities;
 using NerdStore.Core.Data;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace NerdStore.Catalogo.Data.Context
 {
@@ -13,7 +13,7 @@ namespace NerdStore.Catalogo.Data.Context
 
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
-        
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(
